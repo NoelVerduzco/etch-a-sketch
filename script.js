@@ -12,8 +12,8 @@ function askGridLength() {
 }
 
 gridBtn.addEventListener('click', function() {
-    let gridSide = askGridLength();
-    createGrid(gridSide);
+    let gridLength = askGridLength();
+    createGrid(gridLength);
     colorGrid();
 });
 
