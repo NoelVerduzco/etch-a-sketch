@@ -1,0 +1,22 @@
+* {
+    border: 1px red solid;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.pixels {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.row {
+    display: flex;
+    flex-grow: 1;
+}
+
+.col {
+    flex-grow: 1;
+}
