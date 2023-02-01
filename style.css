@@ -1,15 +1,21 @@
 * {
     border: 1px red solid;
+    margin: 0;
 }
 
 body {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .pixels {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 960px;
+    width: 960px;
 }
 
 .row {

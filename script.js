@@ -1,14 +1,24 @@
-// choose N number of rows and columns
-// create N container divs with N boxes in each
+// GET USER GRID SIZE
+
+
+const gridBtn = document.querySelector('#gridBtn');
+
+gridBtn.addEventListener('click', function() {
+
+});
+
+// CREATE GRID
 
 const pixels = document.querySelector('.pixels');
 
 const fragment = document.createDocumentFragment();
 
-for (let row = 0; row < 3; row++) {
+let gridLength = 16;
+
+for (let row = 0; row < gridLength; row++) {
     const divRow = document.createElement('div');
     divRow.classList.add('row');
-    for (let col = 0; col < 3; col++) {
+    for (let col = 0; col < gridLength; col++) {
         const divCol = document.createElement('div');
         divCol.classList.add('col');
         divRow.appendChild(divCol);
@@ -16,4 +26,14 @@ for (let row = 0; row < 3; row++) {
     fragment.appendChild(divRow);
 }
 
+// COLOR BOXES
+
 pixels.appendChild(fragment);
+
+const cols = document.querySelectorAll('.col');
+
+cols.forEach( (box) => {
+    box.addEventListener('mouseover', function() {
+        this.style.backgroundColor = 'green';
+    });
+});
