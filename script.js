@@ -1,22 +1,23 @@
-// GET USER GRID SIZE
-
-function askGridLength() {
-    let gridLength = prompt("Enter the dimensions of your grid");
-    return gridLength;
-}
-
 const gridBtn = document.querySelector('#gridBtn');
-
-gridBtn.addEventListener('click', function() {
-    let gridSide = askGridLength();
-    createGrid(gridSide);
-});
-
-// CREATE GRID
 
 const pixels = document.querySelector('.pixels');
 
 const fragment = document.createDocumentFragment();
+
+// GET USER GRID SIZE
+
+function askGridLength() {
+    let gridLength = prompt("Enter the dimensions of your grid", 16);
+    return gridLength;
+}
+
+gridBtn.addEventListener('click', function() {
+    let gridSide = askGridLength();
+    createGrid(gridSide);
+    colorGrid();
+});
+
+// CREATE GRID
 
 function createGrid(num) {
     let gridLength = num;
@@ -31,15 +32,18 @@ function createGrid(num) {
         }
         fragment.appendChild(divRow);
     }
+    pixels.innerHTML = '';
     pixels.appendChild(fragment);
 }
 
 // COLOR BOXES
 
-const cols = document.querySelectorAll('.col');
+function colorGrid() {
+    const cols = document.querySelectorAll('.col');
 
-cols.forEach( (box) => {
-    box.addEventListener('mouseover', function() {
-        this.style.backgroundColor = 'green';
+    cols.forEach( (box) => {
+        box.addEventListener('mouseover', function() {
+            this.style.backgroundColor = 'green';
+        });
     });
-});
+}
