@@ -43,7 +43,7 @@ function colorGrid() {
 
     cols.forEach( (box) => {
         box.addEventListener('mouseover', function() {
-            this.style.backgroundColor = 'green';
+            this.style.backgroundColor = 'black';
         });
     });
 }

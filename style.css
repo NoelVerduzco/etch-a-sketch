@@ -1,5 +1,5 @@
 * {
-    border: 1px red solid;
+    border: 1px rgba(0, 0, 0, 0.073) solid;
     margin: 0;
 }
 
@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.169);
 }
 
 .pixels {
